@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CurriculumVitae SYSTEM "cvml.dtd">
+<CurriculumVitae>
+	<Header>
+		<about>
+			<about_text>Chelyabinsk</about_text>
+			<about_text>+7(951)482-4098</about_text>
+			<about_text>a.kuzin@everypixel.ru</about_text>
+			<about_text>akuzin.ru</about_text>
+		</about>
+		<about>
+			<about_text>05.03.1998 Gdov city</about_text>
+			<about_text>Male</about_text>
+			<about_text>Not married</about_text>
+		</about>
+		<photo_field>
+			<name>Andrey Kuzin</name>
+			<photo>picture.jpg</photo>
+		</photo_field>
+	</Header>
+	<Content>
+		<section>
+			<title>OBJECTIVE</title>
+			<section_content>
+				<subsection>
+					<description>Full-stack developer, 50000&#8381;</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>EDUCATION</title>
+			<section_content>
+				<subsection>
+					<description>2015-2019</description>
+					<description>Bachelor</description>
+					<description>SUSU, Chelyabinsk</description>
+					<description>Grade Point Average:A</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>PROFESSIONAL SKILLS</title>
+			<section_content>
+				<subsection>
+					<subtitle>Operating Systems</subtitle>
+					<description>Windows</description>
+					<description>Linux</description>
+				</subsection>
+				<subsection>
+					<subtitle>Programming Environments</subtitle>
+					<description>Microsoft Visual Studio</description>
+					<description>JetBrains PyCharm</description>
+					<description>JetBrains IntellijiIdea</description>
+					<description>JetBrains PhpStorm</description>
+				</subsection>
+				<subsection>
+					<subtitle>Programming Languages</subtitle>
+					<description>C++</description>
+					<description>C#</description>
+					<description>Python</description>
+					<description>PHP</description>
+					<description>Javascript</description>
+					<description>1C</description>
+				</subsection>
+				<subsection>
+					<subtitle>Hardware Platforms</subtitle>
+					<description>Intel A-32</description>
+					<description>x86-64</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>PROFESSIONAL EXPERIENCE</title>
+			<section_content>
+				<subsection>
+					<description>2019 - nowadays</description>
+					<description>Full-stack developer</description>
+					<description>Everypixel Media Innovation Group</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>AWARDS</title>
+			<section_content>
+				<subsection>
+					<description>No awards</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>LANGUAGES</title>
+			<section_content>
+				<subsection>
+					<description>Russian (Native speaker)</description>
+					<description>English (Intermediate)</description>
+				</subsection>
+			</section_content>
+		</section>
+		<section>
+			<title>INTERESTS</title>
+			<section_content>
+				<subsection>
+					<description>Video games</description>
+					<description>Cinematograph</description>
+					<description>Adventure literature</description>
+					<description>Geek-culture</description>
+				</subsection>
+			</section_content>
+		</section>
+	</Content>
+</CurriculumVitae>

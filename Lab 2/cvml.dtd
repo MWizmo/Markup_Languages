@@ -1,0 +1,16 @@
+<!ELEMENT CurriculumVitae (Header, Content)>
+
+<!ELEMENT Header(about_list+,photo_field)>
+<!ELEMENT about(about_text+)>
+<!ELEMENT photo_field(name,photo)>
+<!ELEMENT about_text(#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+
+<!ELEMENT Content(section+)>
+<!ELEMENT section(title,section_content)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT section_content(subsection+)>
+<!ELEMENT subsection(subtitle?,description+)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT description(#PCDATA)>
