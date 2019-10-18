@@ -2,110 +2,91 @@
 <!DOCTYPE CurriculumVitae SYSTEM "cvml.dtd">
 <CurriculumVitae>
 	<Header>
+		<about_contact>
+			<name><first_name>Andrew</first_name><last_name>Kuzin</last_name></name>
+			<city>Chelyabinsk</city>
+			<phone>+7(951)482-4098</phone>
+			<email>a.kuzin@everypixel.ru</email>
+			<website>akuzin.ru</website>
+		</about_contact>
 		<about>
-			<about_text>Chelyabinsk</about_text>
-			<about_text>+7(951)482-4098</about_text>
-			<about_text>a.kuzin@everypixel.ru</about_text>
-			<about_text>akuzin.ru</about_text>
+			<birthday>05.03.1998</birthday> <city>Gdov city</city>
+			<gender type="Male"></gender>
+			<status type="Not_married"></status>
 		</about>
-		<about>
-			<about_text>05.03.1998 Gdov city</about_text>
-			<about_text>Male</about_text>
-			<about_text>Not married</about_text>
-		</about>
-		<photo_field>
-			<name>Andrey Kuzin</name>
-			<photo>picture.jpg</photo>
-		</photo_field>
+		<photo src="profile.jpg"/>
 	</Header>
 	<Content>
-		<section>
+		<goal_section>
 			<title>OBJECTIVE</title>
-			<section_content>
-				<subsection>
-					<description>Full-stack developer, 50000&#8381;</description>
-				</subsection>
-			</section_content>
-		</section>
-		<section>
+			<goal><position>Full-stack developer</position> <fee>50000 &#8381;</fee></goal>
+		</goal_section>
+
+		<edu_section>
 			<title>EDUCATION</title>
-			<section_content>
-				<subsection>
-					<description>2015-2019</description>
-					<description>Bachelor</description>
-					<description>SUSU, Chelyabinsk</description>
-					<description>Grade Point Average:A</description>
-				</subsection>
-			</section_content>
-		</section>
-		<section>
+				<education>
+					<years><from_year>2015</from_year><to_year>2019</to_year></years>
+					<grade>Bachelor</grade>
+					<univercity><city>Chelyabinsk</city><univercity_title>SUSU</univercity_title></univercity>
+					<avg_mark type="A">Grade Point Average</avg_mark>
+				</education>
+		</edu_section>
+
+		<skill_section>
 			<title>PROFESSIONAL SKILLS</title>
-			<section_content>
 				<subsection>
 					<subtitle>Operating Systems</subtitle>
-					<description>Windows</description>
-					<description>Linux</description>
+					<element>Windows</element>
+					<element>Linux</element>
 				</subsection>
 				<subsection>
 					<subtitle>Programming Environments</subtitle>
-					<description>Microsoft Visual Studio</description>
-					<description>JetBrains PyCharm</description>
-					<description>JetBrains IntellijiIdea</description>
-					<description>JetBrains PhpStorm</description>
+					<element>Microsoft Visual Studio</element>
+					<element>JetBrains PyCharm</element>
+					<element>JetBrains IntellijiIdea</element>
+					<element>JetBrains PhpStorm</element>
 				</subsection>
 				<subsection>
 					<subtitle>Programming Languages</subtitle>
-					<description>C++</description>
-					<description>C#</description>
-					<description>Python</description>
-					<description>PHP</description>
-					<description>Javascript</description>
-					<description>1C</description>
+					<element>C++</element>
+					<element>C#</element>
+					<element>Python</element>
+					<element>PHP</element>
+					<element>Javascript</element>
+					<element>1C</element>
 				</subsection>
 				<subsection>
 					<subtitle>Hardware Platforms</subtitle>
-					<description>Intel A-32</description>
-					<description>x86-64</description>
+					<element>Intel A-32</element>
+					<element>x86-64</element>
 				</subsection>
-			</section_content>
-		</section>
-		<section>
+		</skill_section>
+
+		<prof_section>
 			<title>PROFESSIONAL EXPERIENCE</title>
-			<section_content>
-				<subsection>
-					<description>2019 - nowadays</description>
-					<description>Full-stack developer</description>
-					<description>Everypixel Media Innovation Group</description>
-				</subsection>
-			</section_content>
-		</section>
-		<section>
+				<job>
+					<years><from_year>2019</from_year><to_year>nowadays</to_year></years>
+					<position>Full-stack developer</position>
+					<company>Everypixel Media Innovation Group</company>
+				</job>
+		</prof_section>
+
+		<awards_section>
 			<title>AWARDS</title>
-			<section_content>
-				<subsection>
-					<description>No awards</description>
-				</subsection>
-			</section_content>
-		</section>
-		<section>
+		</awards_section>
+
+		<lang_section>
 			<title>LANGUAGES</title>
-			<section_content>
-				<subsection>
-					<description>Russian (Native speaker)</description>
-					<description>English (Intermediate)</description>
-				</subsection>
-			</section_content>
-		</section>
-		<section>
+				<language level="Native_speaker">Russian</language>
+				<language level="Intermediate">English</language>
+		</lang_section>
+
+		<interests_section>
 			<title>INTERESTS</title>
-			<section_content>
-				<subsection>
-					<description>Video games</description>
-					<description>Cinematograph</description>
-					<description>Adventure literature</description>
-					<description>Geek-culture</description>
-				</subsection>
-			</section_content>
-		</section>
+					<interest>Video games</interest>
+					<interest>Cinematograph</interest>
+					<interest>Adventure literature</interest>
+					<interest>Geek-culture</interest>
+		</interests_section>
 	</Content>
 </CurriculumVitae>

@@ -1,16 +1,63 @@
 <!ELEMENT CurriculumVitae (Header, Content)>
 
-<!ELEMENT Header(about_list+,photo_field)>
-<!ELEMENT about(about_text+)>
-<!ELEMENT photo_field(name,photo)>
-<!ELEMENT about_text(#PCDATA)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT photo (#PCDATA)>
+<!ELEMENT Header (about_contact,about,photo)>
+<!ELEMENT about_contact (name,city,phone,email,website)>
+<!ELEMENT name (first_name,last_name)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT about (birthday,city,gender,status)>
+<!ELEMENT birthday (#PCDATA)>
+<!ELEMENT gender EMPTY>
+<!ATTLIST gender
+	type (Male|Female) #REQUIRED>
+<!ELEMENT status EMPTY>
+<!ATTLIST status
+	type (Married|Not_married) #REQUIRED>
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo
+	src CDATA #REQUIRED>
 
-<!ELEMENT Content(section+)>
-<!ELEMENT section(title,section_content)>
+
+<!ELEMENT Content (goal_section,edu_section,skill_section,prof_section,awards_section,lang_section,interests_section)>
 <!ELEMENT title (#PCDATA)>
-<!ELEMENT section_content(subsection+)>
-<!ELEMENT subsection(subtitle?,description+)>
+
+<!ELEMENT goal_section (title, goal)>
+<!ELEMENT goal (position,fee)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>
+
+<!ELEMENT edu_section (title,education+)>
+<!ELEMENT education (years,grade,univercity,avg_mark)>
+<!ELEMENT years (from_year,to_year)>
+<!ELEMENT from_year (#PCDATA)>
+<!ELEMENT to_year (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT univercity (city, univercity_title)>
+<!ELEMENT univercity_title (#PCDATA)>
+<!ELEMENT avg_mark (#PCDATA)>
+<!ATTLIST avg_mark
+	type (A|B|C|D) #REQUIRED>
+
+<!ELEMENT skill_section (title,subsection+)>
+<!ELEMENT subsection (subtitle,element+)>
 <!ELEMENT subtitle (#PCDATA)>
-<!ELEMENT description(#PCDATA)>
+<!ELEMENT element (#PCDATA)>
+
+<!ELEMENT prof_section (title, job+)>
+<!ELEMENT job (years,position,company)>
+<!ELEMENT company (#PCDATA)>
+
+<!ELEMENT awards_section (title,award*)>
+<!ELEMENT award (#PCDATA)>
+
+<!ELEMENT lang_section (title,language+)>
+<!ELEMENT language (#PCDATA)>
+<!ATTLIST language
+	level (Native_speaker|Elementary|Pre-Intermediate|Intermediate|Upper-Intermediate|Advanced|Proficiency) #REQUIRED>
+
+<!ELEMENT interests_section (title, interest*)>
+<!ELEMENT interest (#PCDATA)>
