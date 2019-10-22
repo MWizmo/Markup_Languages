@@ -25,7 +25,7 @@
     <div class="center_flex">
       <p><xsl:value-of select="city" /> &#8194; </p>&#8226;
       <p>&#8194;<xsl:value-of select="phone"/>&#8194;</p>&#8226;
-      <p>&#8194;<xsl:value-of select="email"/>&#8194;</p>&#8226;
+      <p>&#8194;<a><xsl:attribute name="href">mailto:<xsl:value-of select="email"/></xsl:attribute><xsl:value-of select="email"/></a>&#8194;</p>&#8226;
       <p>&#8194;<a><xsl:attribute name="href">http://<xsl:value-of select="website"/></xsl:attribute><xsl:value-of select="website"/></a></p>
     </div>
   </xsl:template>

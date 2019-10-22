@@ -62,3 +62,8 @@ ul{
 	flex-direction:row;
 	justify-content: space-between;
 }
+
+a{
+	color:black;
+	text-decoration: none;
+}

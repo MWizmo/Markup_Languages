@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CurriculumVitae SYSTEM "cvml.dtd">
+<CurriculumVitae>
+	<Header>
+		<about_contact>
+			<name><first_name>Andrew</first_name><last_name>Kuzin</last_name></name>
+			<city>Chelyabinsk</city>
+			<phone>+7(951)482-4098</phone>
+			<email>a.kuzin@everypixel.ru</email>
+			<website>akuzin.ru</website>
+		</about_contact>
+		<about>
+			<birthday>05.03.1998</birthday> <city>Gdov city</city>
+			<gender type="Male"></gender>
+			<status type="Not_married"></status>
+		</about>
+		<photo src="profile.jpg"/>
+	</Header>
+	<Content>
+		<goal_section>
+			<title>OBJECTIVE</title>
+			<goal><position>Full-stack developer</position> <fee>50000 &#8381;</fee></goal>
+		</goal_section>
+
+		<edu_section>
+			<title>EDUCATION</title>
+				<education>
+					<years><from_year>2015</from_year><to_year>2019</to_year></years>
+					<grade>Bachelor</grade>
+					<univercity><city>Chelyabinsk</city><univercity_title>SUSU</univercity_title></univercity>
+					<avg_mark type="A">Grade Point Average</avg_mark>
+				</education>
+		</edu_section>
+
+		<skill_section>
+			<title>PROFESSIONAL SKILLS</title>
+				<subsection>
+					<subtitle>Operating Systems</subtitle>
+					<element>Windows</element>
+					<element>Linux</element>
+				</subsection>
+				<subsection>
+					<subtitle>Programming Environments</subtitle>
+					<element>Microsoft Visual Studio</element>
+					<element>JetBrains PyCharm</element>
+					<element>JetBrains IntellijiIdea</element>
+					<element>JetBrains PhpStorm</element>
+				</subsection>
+				<subsection>
+					<subtitle>Programming Languages</subtitle>
+					<element>C++</element>
+					<element>C#</element>
+					<element>Python</element>
+					<element>PHP</element>
+					<element>Javascript</element>
+					<element>1C</element>
+				</subsection>
+				<subsection>
+					<subtitle>Hardware Platforms</subtitle>
+					<element>Intel A-32</element>
+					<element>x86-64</element>
+				</subsection>
+		</skill_section>
+
+		<prof_section>
+			<title>PROFESSIONAL EXPERIENCE</title>
+				<job>
+					<years><from_year>2019</from_year><to_year>nowadays</to_year></years>
+					<position>Full-stack developer</position>
+					<company>Everypixel Media Innovation Group</company>
+				</job>
+		</prof_section>
+
+		<awards_section>
+			<title>AWARDS</title>
+		</awards_section>
+
+		<lang_section>
+			<title>LANGUAGES</title>
+				<language level="Native_speaker">Russian</language>
+				<language level="Intermediate">English</language>
+		</lang_section>
+
+		<interests_section>
+			<title>INTERESTS</title>
+					<interest>Video games</interest>
+					<interest>Cinematograph</interest>
+					<interest>Adventure literature</interest>
+					<interest>Geek-culture</interest>
+		</interests_section>
+	</Content>
+</CurriculumVitae>
