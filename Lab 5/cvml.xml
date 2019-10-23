@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE CurriculumVitae SYSTEM "cvml.dtd">
-<CurriculumVitae>
-	<Header>
+<curriculum_vitae xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cvml.xsd">
+	<header>
 		<about_contact>
 			<name><first_name>Andrew</first_name><last_name>Kuzin</last_name></name>
 			<city>Chelyabinsk</city>
@@ -15,11 +14,11 @@
 			<status type="Not_married"></status>
 		</about>
 		<photo src="profile.jpg"/>
-	</Header>
-	<Content>
+	</header>
+	<content>
 		<goal_section>
 			<title>OBJECTIVE</title>
-			<goal><position>Full-stack developer</position> <fee>50000 &#8381;</fee></goal>
+			<goal><position>Full-stack developer</position> <fee>50000</fee>&#8381;</goal>
 		</goal_section>
 
 		<edu_section>
@@ -88,5 +87,5 @@
 					<interest>Adventure literature</interest>
 					<interest>Geek-culture</interest>
 		</interests_section>
-	</Content>
-</CurriculumVitae>
+	</content>
+</curriculum_vitae>

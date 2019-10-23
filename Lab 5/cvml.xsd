@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:complexType name="section">
+		   <xs:sequence>
+		      <xs:element name="title" type="xs:string"/>
+		   </xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_years">
+		   <xs:sequence>
+		      <xs:element name="from_year">
+		      	<xs:simpleType>
+			      <xs:restriction base="xs:integer">
+			         <xs:minInclusive value="1950"/>
+			         <xs:maxInclusive value="2019"/>
+			      </xs:restriction>
+			   </xs:simpleType>
+			</xs:element>
+		      <xs:element name="to_year">
+		      	<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="19[5-9][0-9]|20[0-1][0-9]|nowadays"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		   </xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_goal_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="goal">
+			          <xs:complexType mixed="true"><xs:sequence>
+			           	<xs:element name="position" type="xs:string"/>
+			           	<xs:element name="fee" type="xs:integer"/>
+			          </xs:sequence></xs:complexType>
+			      </xs:element>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_edu_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="education" maxOccurs="unbounded">
+			          <xs:complexType><xs:sequence>
+			           	<xs:element name="years" type="_years"/>
+			           	<xs:element name="grade" type="xs:string"/>
+			           	<xs:element name="univercity">
+				          <xs:complexType><xs:sequence>
+				           	<xs:element name="city" type="xs:string"/>
+				           	<xs:element name="univercity_title" type="xs:string"/>
+				          </xs:sequence></xs:complexType>
+				      </xs:element>
+				      <xs:element name="avg_mark">
+						   <xs:complexType>
+						      <xs:simpleContent>
+						         <xs:extension base="xs:string">
+						            <xs:attribute name="type" use="required">
+									    <xs:simpleType>
+									      	<xs:restriction base="xs:string">
+										         <xs:pattern value="A|B|C|D"/>
+										    </xs:restriction>
+										  	</xs:simpleType>
+									</xs:attribute>
+						         </xs:extension>
+						      </xs:simpleContent>
+						   </xs:complexType>
+						</xs:element>
+			          </xs:sequence></xs:complexType>
+			      </xs:element>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_subsection">
+		   <xs:sequence>
+		      <xs:element name="subtitle" type="xs:string"/>
+		      <xs:element name="element" type="xs:string" maxOccurs="unbounded"/>
+		   </xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_skill_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="subsection" type="_subsection" maxOccurs="5"/>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_prof_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="job" minOccurs="0" maxOccurs="unbounded">
+			          <xs:complexType><xs:sequence>
+			           	<xs:element name="years" type="_years"/>
+			           	<xs:element name="position" type="xs:string"/>
+			           	<xs:element name="company" type="xs:string"/>
+			          </xs:sequence></xs:complexType>
+			      </xs:element>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_awards_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="award" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_lang_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="language" maxOccurs="unbounded">
+						   <xs:complexType>
+						      <xs:simpleContent>
+						         <xs:extension base="xs:string">
+						            <xs:attribute name="level" use="required">
+									    <xs:simpleType>
+									      	<xs:restriction base="xs:string">
+										         <xs:pattern value="Native_speaker|Elementary|Pre-Intermediate|Intermediate|Upper-Intermediate|Advanced|Proficiency"/>
+										    </xs:restriction>
+										  	</xs:simpleType>
+									</xs:attribute>
+						         </xs:extension>
+						      </xs:simpleContent>
+						   </xs:complexType>
+						</xs:element>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="_interests_section">
+		<xs:complexContent>
+		    <xs:extension base="section">
+		       <xs:sequence>
+		          <xs:element name="interest" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		       </xs:sequence>
+		    </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="curriculum_vitae">
+      <xs:complexType><xs:sequence>
+      	<xs:element name="header">
+        	<xs:complexType><xs:sequence>
+         		<xs:element name="about_contact">
+         			<xs:complexType><xs:sequence>
+		         		<xs:element name="name">
+		         			<xs:complexType><xs:sequence>
+		         				<xs:element name="first_name" type="xs:string"/>
+		         				<xs:element name="last_name" type="xs:string"/>
+				         	</xs:sequence></xs:complexType>
+				      	</xs:element>
+		         		<xs:element name="city" type="xs:string"/>
+		         		<xs:element name="phone" type="xs:string"/>
+		         		<xs:element name="email" type="xs:string"/>
+		         		<xs:element name="website" type="xs:string"/>
+		         	</xs:sequence></xs:complexType>
+		         </xs:element>
+
+		         <xs:element name="about">
+         			<xs:complexType><xs:sequence>
+		         		<xs:element name="birthday" type="xs:string"/>
+		         		<xs:element name="city" type="xs:string"/>
+		         		<xs:element name="gender">
+		         			<xs:complexType>
+						      <xs:attribute name="type" use="required">
+						      	<xs:simpleType>
+						      		<xs:restriction base="xs:string">
+							         	<xs:pattern value="Male|Female"/>
+							      	</xs:restriction>
+							  	</xs:simpleType>
+							  </xs:attribute>
+						   </xs:complexType>
+						</xs:element>
+		         		<xs:element name="status">
+		         			<xs:complexType>
+						      <xs:attribute name="type" use="required">
+						      	<xs:simpleType><xs:restriction base="xs:string">
+							         <xs:enumeration value="Married"/>
+							         <xs:enumeration value="Not_married"/>
+							      </xs:restriction></xs:simpleType>
+							  </xs:attribute>
+						   </xs:complexType>
+						</xs:element>
+		         	</xs:sequence></xs:complexType>
+		         </xs:element>
+
+		         <xs:element name="photo">
+		         	<xs:complexType>
+						<xs:attribute name="src" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+         	</xs:sequence></xs:complexType>
+      	</xs:element>
+
+        <xs:element name="content">
+           	<xs:complexType><xs:sequence>
+           		<xs:element name="goal_section" type="_goal_section"/>
+           		<xs:element name="edu_section" type="_edu_section"/>
+           		<xs:element name="skill_section" type="_skill_section"/>
+           		<xs:element name="prof_section" type="_prof_section"/>
+           		<xs:element name="awards_section" type="_awards_section"/>
+           		<xs:element name="lang_section" type="_lang_section"/>
+           		<xs:element name="interests_section" type="_interests_section"/>
+         	</xs:sequence></xs:complexType>
+      	</xs:element>
+      </xs:sequence></xs:complexType>
+   </xs:element>
+</xs:schema>
