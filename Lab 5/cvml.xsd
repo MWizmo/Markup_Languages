@@ -89,7 +89,7 @@
 		<xs:complexContent>
 		    <xs:extension base="section">
 		       <xs:sequence>
-		          <xs:element name="subsection" type="_subsection" maxOccurs="5"/>
+		          <xs:element name="subsection" type="_subsection" maxOccurs="unbounded"/>
 		       </xs:sequence>
 		    </xs:extension>
 		</xs:complexContent>
@@ -168,15 +168,27 @@
 				         	</xs:sequence></xs:complexType>
 				      	</xs:element>
 		         		<xs:element name="city" type="xs:string"/>
-		         		<xs:element name="phone" type="xs:string"/>
-		         		<xs:element name="email" type="xs:string"/>
+		         		<xs:element name="phone">
+		         			<xs:simpleType>
+						      	<xs:restriction base="xs:string">
+							        <xs:pattern value="\+7\(9[0-9][0-9]\)[0-9][0-9][0-9]\-[0-9][0-9][0-9][0-9]"/>
+							     </xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+		         		<xs:element name="email">
+		         			<xs:simpleType>
+						      	<xs:restriction base="xs:string">
+							        <xs:pattern value="[a-z.]+@[a-z]+.[a-z]+"/>
+							     </xs:restriction>
+							</xs:simpleType>
+						</xs:element>
 		         		<xs:element name="website" type="xs:string"/>
 		         	</xs:sequence></xs:complexType>
 		         </xs:element>
 
 		         <xs:element name="about">
          			<xs:complexType><xs:sequence>
-		         		<xs:element name="birthday" type="xs:string"/>
+		         		<xs:element name="birthday" type="xs:date"/>
 		         		<xs:element name="city" type="xs:string"/>
 		         		<xs:element name="gender">
 		         			<xs:complexType>
