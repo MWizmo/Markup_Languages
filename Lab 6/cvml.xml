@@ -32,6 +32,12 @@
 					<avg_mark type="A"></avg_mark>
 				</education>
 				<education>
+					<years><from_year>2018</from_year><to_year>2020</to_year></years>
+					<grade>Assistant</grade>
+					<univercity><city>Chelyabinsk</city><univercity_title>CSU</univercity_title></univercity>
+					<avg_mark type="A"></avg_mark>
+				</education>
+				<education>
 					<years><from_year>2019</from_year><to_year>2021</to_year></years>
 					<grade>Master</grade>
 					<univercity><city>Chelyabinsk</city><univercity_title>SUSU</univercity_title></univercity>

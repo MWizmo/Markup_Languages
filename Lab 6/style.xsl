@@ -101,37 +101,38 @@
         <xsl:for-each select="education">
           <xsl:variable name="start" select="years/from_year"/>
           <xsl:variable name="end" select="years/to_year"/>
-          <circle r="{(($end - $start) div 2)*13.2}%" cx="{(10 - (2022-(($end + $start)div 2)))*10}%" cy="7cm" fill="red" fill-opacity="0.7" stroke="black"/>
+          <circle r="{(($end - $start) div 2)*13.2}%" cx="{(10 - (2022-(($end + $start)div 2)))*10}%" cy="10cm" fill-opacity="0.6" stroke="black" class="type{position()}"/>
         </xsl:for-each>
 
-        <text x="50%" y="0.5cm" class="text_title">Education</text>
-        <rect width="100%" height="100%" x="0" y="7cm" rx="0" ry="0" fill="#f2f4f4" />
-        <line x1="0" y1="7cm" x2="95%" y2="7cm" stroke="black" stroke-width="3" marker-end="url(#arrow)"/>
-        <rect width="100%" height="10cm" x="0.01" y="0.01" fill="transparent" stroke="black"/>
-        <line x1="1.5" y1="7.2cm" x2="1.5" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="1.5" y="7.5cm">2012</text>
-        <line x1="10%" y1="7.2cm" x2="10%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="10%" y="7.5cm">2013</text>
-        <line x1="20%" y1="7.2cm" x2="20%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="20%" y="7.5cm">2014</text>
-        <line x1="30%" y1="7.2cm" x2="30%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="30%" y="7.5cm">2015</text>
-        <line x1="40%" y1="7.2cm" x2="40%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="40%" y="7.5cm">2016</text>
-        <line x1="50%" y1="7.2cm" x2="50%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="50%" y="7.5cm">2017</text>
-        <line x1="60%" y1="7.2cm" x2="60%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="60%" y="7.5cm">2018</text>
-        <line x1="70%" y1="7.2cm" x2="70%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="70%" y="7.5cm">2019</text>
-        <line x1="80%" y1="7.2cm" x2="80%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="80%" y="7.5cm">2020</text>
-        <line x1="90%" y1="7.2cm" x2="90%" y2="6.8cm" stroke="black" stroke-width="3" />
-        <text x="90%" y="7.5cm">2021</text>
+        <text x="50%" y="1cm" class="text_title">Education</text>
+        <rect width="100%" height="100%" x="0" y="10cm" rx="0" ry="0" fill="#f2f4f4" />
+        <line x1="10" y1="10cm" x2="95%" y2="10cm" stroke="black" stroke-width="3" marker-end="url(#arrow)"/>
+        <rect width="98%" height="14.9cm" x="0.01" y="0.01" fill="transparent" stroke="black"/>
+        <line x1="9" y1="10.2cm" x2="9" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="9.5" y="10.5cm">2012</text>
+        <line x1="10%" y1="10.2cm" x2="10%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="10%" y="10.5cm">2013</text>
+        <line x1="20%" y1="10.2cm" x2="20%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="20%" y="10.5cm">2014</text>
+        <line x1="30%" y1="10.2cm" x2="30%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="30%" y="10.5cm">2015</text>
+        <line x1="40%" y1="10.2cm" x2="40%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="40%" y="10.5cm">2016</text>
+        <line x1="50%" y1="10.2cm" x2="50%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="50%" y="10.5cm">2017</text>
+        <line x1="60%" y1="10.2cm" x2="60%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="60%" y="10.5cm">2018</text>
+        <line x1="70%" y1="10.2cm" x2="70%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="70%" y="10.5cm">2019</text>
+        <line x1="80%" y1="10.2cm" x2="80%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="80%" y="10.5cm">2020</text>
+        <line x1="90%" y1="10.2cm" x2="90%" y2="9.8cm" stroke="black" stroke-width="3" />
+        <text x="90%" y="10.5cm">2021</text>
         <xsl:for-each select="education">
-          <xsl:variable name="univercity" select="univercity"/>
-          <rect x="5%" y="8.5cm" width="20px" height="20px" fill="red" stroke="black"/>
-          <text x="8%" y="8.85cm">SUSU</text>
+          <xsl:variable name="univer1" select="univercity/univercity_title"/>
+          <xsl:variable name="univer2" select="grade"/>
+          <rect x="{5+(position()-1)*20}%" y="12.5cm" width="20px" height="20px" stroke="black" class="type{position()}"/>
+          <text x="{8+(position()-1)*20}%" y="12.85cm"><xsl:value-of select="$univer1"/>, <xsl:value-of select="$univer2"/></text>
         </xsl:for-each>
     </svg>
   </div>
