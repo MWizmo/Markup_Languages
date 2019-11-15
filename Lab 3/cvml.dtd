@@ -1,6 +1,4 @@
-<!ELEMENT curriculum_vitae (header, content)>
-
-<!ELEMENT header (about_contact,about,photo)>
+<!ELEMENT curriculum_vitae (about_contact,about,photo, goal_section,edu_section,skill_section,prof_section,awards_section,lang_section,interests_section)>
 <!ELEMENT about_contact (name,city,phone,email,website)>
 <!ELEMENT name (first_name,last_name)>
 <!ELEMENT first_name (#PCDATA)>
@@ -19,11 +17,8 @@
 	type (Married|Not_married) #REQUIRED>
 <!ELEMENT photo EMPTY>
 <!ATTLIST photo
-	src CDATA #REQUIRED
-	alt CDATA #REQUIRED>
+	src CDATA #REQUIRED>
 
-
-<!ELEMENT content (goal_section,edu_section,skill_section,prof_section,awards_section,lang_section,interests_section)>
 <!ELEMENT title (#PCDATA)>
 
 <!ELEMENT goal_section (title, goal)>

@@ -101,7 +101,7 @@
         <xsl:for-each select="education">
           <xsl:variable name="start" select="years/from_year"/>
           <xsl:variable name="end" select="years/to_year"/>
-          <circle r="{(($end - $start) div 2)*13.2}%" cx="{(10 - (2022-(($end + $start)div 2)))*10}%" cy="10cm" fill-opacity="0.6" stroke="black" class="type{position()}"/>
+          <circle r="{(($end - $start) div 2)*12.2}%" cx="{(10 - (2022-(($end + $start)div 2)))*10}%" cy="10cm" fill-opacity="0.6" stroke="black" class="type{position()}"/>
         </xsl:for-each>
 
         <text x="50%" y="1cm" class="text_title">Education</text>
@@ -131,7 +131,7 @@
         <xsl:for-each select="education">
           <xsl:variable name="univer1" select="univercity/univercity_title"/>
           <xsl:variable name="univer2" select="grade"/>
-          <rect x="{5+(position()-1)*20}%" y="12.5cm" width="20px" height="20px" stroke="black" class="type{position()}"/>
+          <rect x="{5+(position()-1)*20}%" y="12.5cm" width="20px" height="20px" stroke="black" class="type{position()}" fill-opacity="0.6"/>
           <text x="{8+(position()-1)*20}%" y="12.85cm"><xsl:value-of select="$univer1"/>, <xsl:value-of select="$univer2"/></text>
         </xsl:for-each>
     </svg>

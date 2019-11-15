@@ -8,17 +8,19 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
       </head>
       <body>
-        <xsl:apply-templates select="header"/>
-        <xsl:apply-templates select="content"/>      
+        <xsl:apply-templates select="about_contact"/>
+        <xsl:apply-templates select="about"/>
+        <xsl:apply-templates select="about_contact/name"/>
+        <xsl:apply-templates select="photo"/>
+        <xsl:apply-templates select="goal_section"/>
+        <xsl:apply-templates select="edu_section"/>
+        <xsl:apply-templates select="skill_section"/>
+        <xsl:apply-templates select="prof_section"/>
+        <xsl:apply-templates select="awards_section"/>
+        <xsl:apply-templates select="lang_section"/>
+        <xsl:apply-templates select="interests_section"/>     
       </body>
     </html>
-  </xsl:template>
-
-  <xsl:template match="header">
-    <xsl:apply-templates select="about_contact"/>
-    <xsl:apply-templates select="about"/>
-    <xsl:apply-templates select="about_contact/name"/>
-    <xsl:apply-templates select="photo"/>
   </xsl:template>
 
   <xsl:template match="about_contact">
@@ -32,10 +34,18 @@
 
   <xsl:template match="about">
     <div class="center_grey_flex">
-      <p><xsl:value-of select="birthday"/>, <xsl:value-of select="city"/>&#8194;</p>&#8226;
+      <p><xsl:apply-templates select="birthday"/> , <xsl:value-of select="city"/>&#8194;</p>&#8226;
       <p>&#8194;<xsl:apply-templates select="gender"/>&#8194;</p>&#8226;
       <p>&#8194;<xsl:apply-templates select="status"/>&#8194;</p>
     </div>
+  </xsl:template>
+
+  <xsl:template match="birthday">
+    <xsl:value-of select="substring(., 9, 2)"/> 
+    <xsl:text>.</xsl:text> 
+    <xsl:value-of select="substring(., 6, 2)"/> 
+    <xsl:text>.</xsl:text> 
+    <xsl:value-of select="substring(., 0, 5)"/>
   </xsl:template>
 
   <xsl:template match="gender">
@@ -52,16 +62,6 @@
 
   <xsl:template match="photo">
     <img><xsl:attribute name="src"><xsl:value-of select="@src"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="@alt"/></xsl:attribute></img>
-  </xsl:template>
-
-  <xsl:template match="content">
-    <xsl:apply-templates select="goal_section"/>
-    <xsl:apply-templates select="edu_section"/>
-    <xsl:apply-templates select="skill_section"/>
-    <xsl:apply-templates select="prof_section"/>
-    <xsl:apply-templates select="awards_section"/>
-    <xsl:apply-templates select="lang_section"/>
-    <xsl:apply-templates select="interests_section"/>
   </xsl:template>
 
   <xsl:template match="goal_section">
